@@ -1,0 +1,264 @@
+/**
+ * WPCalibrate Menu Control Frontend Stylesheet
+ *
+ * @package WPCalibrate\MenuControl
+ */
+
+:root {
+	--wpcalibrate-breakpoint: 768px;
+	--wpcalibrate-icon-spacing: 6px;
+	--wpcalibrate-badge-radius: 4px;
+	--wpcalibrate-mega-width: 1140px;
+}
+
+/* Base Item Styles */
+.wpcalibrate-item {
+	position: relative;
+}
+
+/* Icon */
+.wpcalibrate-menu-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	margin-inline-end: var(--wpcalibrate-icon-spacing, 6px);
+	font-size: 1.1em;
+	line-height: 1;
+}
+
+.wpcalibrate-icon-svg svg {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	vertical-align: -0.125em;
+}
+
+/* Badges */
+.wpcalibrate-badge {
+	display: inline-block;
+	padding: 0.15em 0.5em;
+	font-size: 0.72em;
+	font-weight: 700;
+	line-height: 1.2;
+	border-radius: var(--wpcalibrate-badge-radius, 4px);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+/* Badge Semantic Variants */
+.wpcalibrate-badge--primary {
+	background-color: #2563eb;
+	color: #ffffff;
+}
+
+.wpcalibrate-badge--secondary {
+	background-color: #64748b;
+	color: #ffffff;
+}
+
+.wpcalibrate-badge--accent {
+	background-color: #8b5cf6;
+	color: #ffffff;
+}
+
+.wpcalibrate-badge--success {
+	background-color: #16a34a;
+	color: #ffffff;
+}
+
+.wpcalibrate-badge--warning {
+	background-color: #ca8a04;
+	color: #ffffff;
+}
+
+.wpcalibrate-badge--danger {
+	background-color: #dc2626;
+	color: #ffffff;
+}
+
+.wpcalibrate-badge--info {
+	background-color: #0284c7;
+	color: #ffffff;
+}
+
+.wpcalibrate-badge--neutral {
+	background-color: #334155;
+	color: #ffffff;
+}
+
+/* Subtitle */
+.wpcalibrate-subtitle {
+	display: block;
+	font-size: 0.8em;
+	opacity: 0.75;
+	font-weight: normal;
+	line-height: 1.3;
+	margin-top: 2px;
+}
+
+/* Highlight / CTA */
+.wpcalibrate-item.wpcalibrate-highlight > a {
+	padding: 0.4em 0.8em;
+	border-radius: 4px;
+	background-color: rgba(37, 99, 235, 0.1);
+	border: 1px solid rgba(37, 99, 235, 0.3);
+	font-weight: 600;
+	transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.wpcalibrate-item.wpcalibrate-highlight > a:hover {
+	background-color: rgba(37, 99, 235, 0.2);
+}
+
+/* Non-Clickable Heading */
+.wpcalibrate-non-clickable,
+.wpcalibrate-item.wpcalibrate-is-heading > a {
+	cursor: default;
+	pointer-events: none;
+}
+
+.wpcalibrate-non-clickable:focus-visible,
+.wpcalibrate-item.wpcalibrate-is-heading > a:focus-visible {
+	outline: 2px solid #2563eb;
+	outline-offset: 2px;
+}
+
+/* WooCommerce Dynamic Badges */
+.wpcalibrate-wc-cart-count {
+	display: inline-block;
+	background-color: #dc2626;
+	color: #ffffff;
+	font-size: 0.75em;
+	font-weight: 700;
+	padding: 0.1em 0.45em;
+	border-radius: 10px;
+	margin-inline-start: 4px;
+	min-width: 14px;
+	text-align: center;
+	line-height: 1.2;
+}
+
+.wpcalibrate-wc-cart-total {
+	font-weight: 600;
+	margin-inline-start: 4px;
+}
+
+/* Mega Menu Dropdowns (Desktop) */
+@media screen and (min-width: 769px) {
+	.wpcalibrate-item.wpcalibrate-mega-menu {
+		position: static;
+	}
+
+	.wpcalibrate-item.wpcalibrate-mega-menu > ul.sub-menu,
+	.wpcalibrate-item.wpcalibrate-mega-menu > ul.wpcalibrate-dropdown-menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		display: grid !important;
+		margin: 0 auto;
+		padding: 24px;
+		background: #ffffff;
+		border: 1px solid #e2e8f0;
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+		list-style: none;
+		z-index: 99999;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.25s ease, visibility 0.25s ease;
+	}
+
+	/* Show on hover or keyboard focus */
+	.wpcalibrate-item.wpcalibrate-mega-menu:hover > ul.sub-menu,
+	.wpcalibrate-item.wpcalibrate-mega-menu:focus-within > ul.sub-menu,
+	.wpcalibrate-item.wpcalibrate-mega-menu.wpcalibrate-dropdown-open > ul.sub-menu {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/* Column Configurations */
+	.wpcalibrate-item.wpcalibrate-mega-cols-1 > ul.sub-menu { grid-template-columns: 1fr; }
+	.wpcalibrate-item.wpcalibrate-mega-cols-2 > ul.sub-menu { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+	.wpcalibrate-item.wpcalibrate-mega-cols-3 > ul.sub-menu { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+	.wpcalibrate-item.wpcalibrate-mega-cols-4 > ul.sub-menu { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+	.wpcalibrate-item.wpcalibrate-mega-cols-5 > ul.sub-menu { grid-template-columns: repeat(5, 1fr); gap: 16px; }
+	.wpcalibrate-item.wpcalibrate-mega-cols-6 > ul.sub-menu { grid-template-columns: repeat(6, 1fr); gap: 14px; }
+
+	/* Width Modes */
+	.wpcalibrate-item.wpcalibrate-mega-width-content > ul.sub-menu {
+		width: max-content;
+		max-width: 90vw;
+		left: auto;
+		right: auto;
+	}
+
+	.wpcalibrate-item.wpcalibrate-mega-width-full > ul.sub-menu {
+		width: 100%;
+		max-width: var(--wpcalibrate-mega-width, 1140px);
+	}
+
+	/* Alignment */
+	.wpcalibrate-item.wpcalibrate-mega-align-center > ul.sub-menu {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.wpcalibrate-item.wpcalibrate-mega-align-right > ul.sub-menu {
+		left: auto;
+		right: 0;
+	}
+
+	/* Mega Menu Column Heading Styling */
+	.wpcalibrate-item.wpcalibrate-mega-menu > ul.sub-menu > li > a {
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 0.85em;
+		letter-spacing: 0.5px;
+		margin-bottom: 8px;
+		display: block;
+	}
+
+	.wpcalibrate-item.wpcalibrate-mega-menu > ul.sub-menu > li > ul.sub-menu {
+		position: static;
+		box-shadow: none;
+		border: none;
+		padding: 0;
+		background: transparent;
+		display: block !important;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.wpcalibrate-item.wpcalibrate-mega-menu > ul.sub-menu > li > ul.sub-menu > li {
+		margin-bottom: 6px;
+	}
+}
+
+/* Mobile & Small Screen Degradation */
+@media screen and (max-width: 768px) {
+	.wpcalibrate-item.wpcalibrate-mega-menu > ul.sub-menu {
+		display: block;
+		position: static;
+		width: 100% !important;
+		box-shadow: none;
+		border: none;
+		padding-inline-start: 16px;
+	}
+
+	.wpcalibrate-item.wpcalibrate-mega-menu > ul.sub-menu > li {
+		width: 100%;
+		margin-bottom: 12px;
+	}
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+	.wpcalibrate-item.wpcalibrate-mega-menu > ul.sub-menu,
+	.wpcalibrate-item.wpcalibrate-highlight > a {
+		transition: none !important;
+	}
+}

@@ -1,0 +1,119 @@
+# Copyright (C) 2026 WPCalibrate
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPCalibrate Menu Control 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wpcalibrate.com\n"
+"Last-Translator: WPCalibrate <support@wpcalibrate.com>\n"
+"Language-Team: English <support@wpcalibrate.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-14T10:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WPCalibrate Localization Tool\n"
+"X-Domain: wpcalibrate-menu-control\n"
+
+#: wpcalibrate-menu-control.php:12
+msgid "WPCalibrate Menu Control"
+msgstr ""
+
+#: wpcalibrate-menu-control.php:14
+msgid "Advanced frontend menu control: conditional visibility, icons, badges, subtitles, non-clickable headings, WooCommerce dynamic elements, and lightweight mega menus."
+msgstr ""
+
+#: src/Activation/Activator.php:26
+msgid "%1$s requires PHP version %2$s or higher. Your server is running PHP %3$s."
+msgstr ""
+
+#: src/Activation/Activator.php:40
+msgid "%1$s requires WordPress version %2$s or higher. Your site is running WordPress %3$s."
+msgstr ""
+
+#: src/Admin/AdminMenu.php:57
+msgid "Menu Control"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:31
+msgid "Overview"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:67
+msgid "Menu Control Settings"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:69
+msgid "Configure"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:77
+msgid "Icon (Dashicon class or slug, e.g. dashicons-star-filled)"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:90
+msgid "Before label"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:91
+msgid "After label"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:98
+msgid "Badge Text"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:110
+msgid "Badge Style"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:127
+msgid "Subtitle / Secondary Text"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:143
+msgid "Highlight / Accent Item (Call-to-Action)"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:152
+msgid "Non-Clickable Heading (Disables link, safe semantic header)"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:159
+msgid "Link Rel Attributes (SEO & Safety)"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:174
+msgid "Mega Menu Settings (Top-Level Items Only)"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:181
+msgid "Enable Mega Menu dropdown for this item"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:218
+msgid "Conditional Visibility Rules"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:225
+msgid "Enable conditional visibility for this menu item"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:231
+msgid "Show item when:"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:233
+msgid "ALL rules are met (AND)"
+msgstr ""
+
+#: src/Admin/MenuItemFields.php:234
+msgid "ANY rule is met (OR)"
+msgstr ""
+
+#: src/WooCommerce/DynamicMenuItems.php:61
+msgid "Log Out"
+msgstr ""
+
+#: src/WooCommerce/DynamicMenuItems.php:64
+msgid "Log In"
+msgstr ""

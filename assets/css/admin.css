@@ -1,0 +1,238 @@
+/**
+ * WPCalibrate Menu Control Admin Stylesheet
+ *
+ * @package WPCalibrate\MenuControl
+ */
+
+:root {
+	--wpcalibrate-primary: #1e3a8a;
+	--wpcalibrate-primary-hover: #1e40af;
+	--wpcalibrate-accent: #3b82f6;
+	--wpcalibrate-surface: #ffffff;
+	--wpcalibrate-border: #e2e8f0;
+	--wpcalibrate-text: #0f172a;
+	--wpcalibrate-muted: #64748b;
+}
+
+/* Branded Admin Header */
+.wpcalibrate-admin-wrap {
+	max-width: 1200px;
+	margin: 20px 20px 0 0;
+}
+
+.wpcalibrate-admin-header {
+	background: #ffffff;
+	border: 1px solid var(--wpcalibrate-border);
+	border-radius: 8px;
+	padding: 20px 24px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.wpcalibrate-header-brand {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.wpcalibrate-header-logo {
+	width: 44px;
+	height: 44px;
+	object-fit: contain;
+}
+
+.wpcalibrate-header-titles h1 {
+	margin: 0;
+	font-size: 22px;
+	font-weight: 700;
+	color: var(--wpcalibrate-text);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.wpcalibrate-version-tag {
+	font-size: 12px;
+	font-weight: 600;
+	padding: 2px 8px;
+	background: #f1f5f9;
+	color: #475569;
+	border-radius: 12px;
+}
+
+.wpcalibrate-header-tagline {
+	margin: 4px 0 0 0;
+	font-size: 13px;
+	color: var(--wpcalibrate-muted);
+}
+
+/* Nav Tabs */
+.wpcalibrate-nav-tabs {
+	margin-bottom: 20px;
+}
+
+.wpcalibrate-tab-content {
+	background: #ffffff;
+	border: 1px solid var(--wpcalibrate-border);
+	border-radius: 8px;
+	padding: 24px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Reusable Admin Card */
+.wpcalibrate-card {
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	padding: 16px 20px;
+}
+
+.wpcalibrate-card h3 {
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+/* Status Badges */
+.wpcalibrate-status-badge {
+	display: inline-block;
+	padding: 3px 8px;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.wpcalibrate-status-ok {
+	background: #dcfce7;
+	color: #15803d;
+}
+
+.wpcalibrate-status-warning {
+	background: #fef9c3;
+	color: #854d0e;
+}
+
+.wpcalibrate-status-inactive {
+	background: #f1f5f9;
+	color: #64748b;
+}
+
+/* Menu Item Editor Custom Fields (Appearance > Menus) */
+.wpcalibrate-menu-item-controls {
+	margin: 12px 0 6px 0;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	background: #f8fafc;
+	overflow: hidden;
+}
+
+.wpcalibrate-controls-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 12px;
+	background: #edf2f7;
+	border-bottom: 1px solid #cbd5e1;
+}
+
+.wpcalibrate-badge-logo {
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	padding: 2px 6px;
+	background: #0f172a;
+	color: #ffffff;
+	border-radius: 3px;
+	margin-inline-end: 8px;
+}
+
+.wpcalibrate-controls-body {
+	padding: 14px;
+	background: #ffffff;
+}
+
+.wpcalibrate-field-row {
+	margin-bottom: 12px;
+}
+
+.wpcalibrate-field-row label {
+	display: block;
+	font-weight: 600;
+	font-size: 12px;
+	margin-bottom: 4px;
+	color: #334155;
+}
+
+.wpcalibrate-badge-group {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 10px;
+}
+
+.wpcalibrate-toggles label {
+	display: block;
+	font-weight: normal;
+	margin-bottom: 6px;
+}
+
+.wpcalibrate-rel-group fieldset {
+	border: 1px dashed #cbd5e1;
+	padding: 8px 12px;
+	border-radius: 4px;
+}
+
+.wpcalibrate-field-section {
+	border-top: 1px solid #e2e8f0;
+	padding-top: 12px;
+	margin-top: 14px;
+}
+
+.wpcalibrate-field-section h4 {
+	margin: 0 0 8px 0;
+	font-size: 13px;
+	color: #0f172a;
+}
+
+/* Condition Builder Rows */
+.wpcalibrate-rule-row {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	margin-bottom: 8px;
+	background: #f1f5f9;
+	padding: 6px 10px;
+	border-radius: 4px;
+}
+
+.wpcalibrate-rule-type-select {
+	flex: 1 1 40%;
+}
+
+.wpcalibrate-rule-operator-select {
+	flex: 0 0 80px;
+}
+
+.wpcalibrate-rule-value-input {
+	flex: 1 1 40%;
+}
+
+.wpcalibrate-remove-rule {
+	color: #dc2626 !important;
+	border-color: #fca5a5 !important;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.wpcalibrate-remove-rule:hover {
+	background: #fee2e2 !important;
+}
+
+/* RTL Support */
+body.rtl .wpcalibrate-admin-wrap {
+	margin: 20px 0 0 20px;
+}
+
+body.rtl .wpcalibrate-badge-logo {
+	margin-inline-start: 8px;
+	margin-inline-end: 0;
+}
